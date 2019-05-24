@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		D6609CD72297826000045971 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6609CD62297826000045971 /* AppDelegate.swift */; };
-		D6609CD92297826000045971 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6609CD82297826000045971 /* ViewController.swift */; };
 		D6609CDC2297826000045971 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6609CDA2297826000045971 /* Main.storyboard */; };
 		D6609CDE2297826100045971 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6609CDD2297826100045971 /* Assets.xcassets */; };
 		D6609CE12297826100045971 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6609CDF2297826100045971 /* LaunchScreen.storyboard */; };
+		D6609CE92297848000045971 /* StarWarsSearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6609CE82297848000045971 /* StarWarsSearchTableViewController.swift */; };
+		D6609CF1229785C200045971 /* PersonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6609CF0229785C200045971 /* PersonTableViewCell.swift */; };
+		D6609CF3229786F100045971 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6609CF2229786F100045971 /* Person.swift */; };
+		D6609CF52297871400045971 /* PersonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6609CF42297871400045971 /* PersonController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D6609CD32297826000045971 /* StarWarsSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWarsSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6609CD62297826000045971 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D6609CD82297826000045971 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D6609CDB2297826000045971 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D6609CDD2297826100045971 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D6609CE02297826100045971 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D6609CE22297826100045971 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D6609CE82297848000045971 /* StarWarsSearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsSearchTableViewController.swift; sourceTree = "<group>"; };
+		D6609CF0229785C200045971 /* PersonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableViewCell.swift; sourceTree = "<group>"; };
+		D6609CF2229786F100045971 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		D6609CF42297871400045971 /* PersonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +60,66 @@
 		D6609CD52297826000045971 /* StarWarsSearch */ = {
 			isa = PBXGroup;
 			children = (
-				D6609CD62297826000045971 /* AppDelegate.swift */,
-				D6609CD82297826000045971 /* ViewController.swift */,
-				D6609CDA2297826000045971 /* Main.storyboard */,
-				D6609CDD2297826100045971 /* Assets.xcassets */,
-				D6609CDF2297826100045971 /* LaunchScreen.storyboard */,
-				D6609CE22297826100045971 /* Info.plist */,
+				D6609CED2297858400045971 /* Models */,
+				D6609CEE2297859800045971 /* Model Controllers */,
+				D6609CEF229785AE00045971 /* Views */,
+				D6609CEA2297849400045971 /* View Controller */,
+				D6609CEC229784ED00045971 /* Storyboards */,
+				D6609CEB229784DB00045971 /* Resources */,
 			);
 			path = StarWarsSearch;
+			sourceTree = "<group>";
+		};
+		D6609CEA2297849400045971 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D6609CE82297848000045971 /* StarWarsSearchTableViewController.swift */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		D6609CEB229784DB00045971 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D6609CD62297826000045971 /* AppDelegate.swift */,
+				D6609CDD2297826100045971 /* Assets.xcassets */,
+				D6609CE22297826100045971 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D6609CEC229784ED00045971 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				D6609CDA2297826000045971 /* Main.storyboard */,
+				D6609CDF2297826100045971 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		D6609CED2297858400045971 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D6609CF2229786F100045971 /* Person.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D6609CEE2297859800045971 /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D6609CF42297871400045971 /* PersonController.swift */,
+			);
+			name = "Model Controllers";
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D6609CEF229785AE00045971 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D6609CF0229785C200045971 /* PersonTableViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +193,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6609CD92297826000045971 /* ViewController.swift in Sources */,
+				D6609CF1229785C200045971 /* PersonTableViewCell.swift in Sources */,
+				D6609CE92297848000045971 /* StarWarsSearchTableViewController.swift in Sources */,
+				D6609CF3229786F100045971 /* Person.swift in Sources */,
+				D6609CF52297871400045971 /* PersonController.swift in Sources */,
 				D6609CD72297826000045971 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,7 +345,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3XVDLP5XYQ;
-				INFOPLIST_FILE = StarWarsSearch/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/StarWarsSearch/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,7 +363,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3XVDLP5XYQ;
-				INFOPLIST_FILE = StarWarsSearch/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/StarWarsSearch/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

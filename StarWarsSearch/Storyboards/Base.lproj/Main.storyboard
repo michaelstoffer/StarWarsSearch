@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YZl-Tz-Qob">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Star Wars Search-->
+        <scene sceneID="JhL-lW-CvQ">
+            <objects>
+                <tableViewController id="DE0-2B-3x9" customClass="StarWarsSearchTableViewController" customModule="StarWarsSearch" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="RxY-Hr-Zhz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="qNb-F9-ARW">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="p29-Hp-MfS">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                                    <color key="barTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </searchBar>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="p29-Hp-MfS" secondAttribute="bottom" id="8ta-fn-94n"/>
+                                <constraint firstAttribute="trailing" secondItem="p29-Hp-MfS" secondAttribute="trailing" id="JGA-lI-TA8"/>
+                                <constraint firstItem="p29-Hp-MfS" firstAttribute="top" secondItem="qNb-F9-ARW" secondAttribute="top" id="Wma-aC-sUL"/>
+                                <constraint firstItem="p29-Hp-MfS" firstAttribute="leading" secondItem="qNb-F9-ARW" secondAttribute="leading" id="rXn-Mh-oQl"/>
+                            </constraints>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PersonCell" rowHeight="130" id="MKM-jb-50Y" customClass="PersonTableViewCell" customModule="StarWarsSearch" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="84" width="414" height="130"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MKM-jb-50Y" id="yHi-Qr-pGF">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="129.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="KEP-C7-ppX">
+                                            <rect key="frame" x="20" y="11" width="374" height="108"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RG4-0i-jrR">
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="61"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                                    <color key="textColor" red="0.96862745100000003" green="0.98823529409999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bUY-Bo-QI7">
+                                                    <rect key="frame" x="0.0" y="64" width="374" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.96862745100000003" green="0.98823529409999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Birth Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bH4-UG-pMY">
+                                                    <rect key="frame" x="0.0" y="87.5" width="374" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.96862745100000003" green="0.98823529409999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="KEP-C7-ppX" firstAttribute="top" secondItem="yHi-Qr-pGF" secondAttribute="topMargin" id="Avl-Op-UFb"/>
+                                        <constraint firstItem="KEP-C7-ppX" firstAttribute="leading" secondItem="yHi-Qr-pGF" secondAttribute="leadingMargin" id="Yx6-2c-MmR"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="KEP-C7-ppX" secondAttribute="trailing" id="vDx-3D-e8W"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="KEP-C7-ppX" secondAttribute="bottom" id="vQC-Ct-7OG"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="birthYearLabel" destination="bH4-UG-pMY" id="MmW-bM-f4s"/>
+                                    <outlet property="genderLabel" destination="bUY-Bo-QI7" id="lIm-4r-Cn1"/>
+                                    <outlet property="personLabel" destination="RG4-0i-jrR" id="e1F-kN-Raf"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="DE0-2B-3x9" id="tZc-Xh-8mV"/>
+                            <outlet property="delegate" destination="DE0-2B-3x9" id="is1-x4-wVb"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Star Wars Search" id="FNL-wo-F3o"/>
+                    <connections>
+                        <outlet property="searchBar" destination="p29-Hp-MfS" id="y8Y-Ev-om6"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="azO-cL-Ixt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1002.8985507246377" y="148.66071428571428"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="nMJ-AD-gkC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YZl-Tz-Qob" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="oUQ-nE-07n">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.96862745100000003" green="0.98823529409999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" red="0.96862745100000003" green="0.98823529409999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="DE0-2B-3x9" kind="relationship" relationship="rootViewController" id="vgc-Qm-tJg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pxn-ZO-epV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="259" y="149"/>
+        </scene>
+    </scenes>
+</document>
